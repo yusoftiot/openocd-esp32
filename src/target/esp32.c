@@ -2762,7 +2762,7 @@ COMMAND_HANDLER(esp32_cmd_smpbreak)
 	struct target *target = get_current_target(CMD_CTX);
 	struct esp32_common *esp32 = (struct esp32_common*)target->arch_info;
 	unsigned int i;
-	int res;
+	int res = 0;
 	uint32_t set=0, clear=0;
 	uint8_t dsr[4];
 
